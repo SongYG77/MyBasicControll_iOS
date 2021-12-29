@@ -18,8 +18,12 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var tfData: UITextField!
-    
     @IBOutlet weak var tv: UITextView!
+    @IBOutlet weak var progressview1: UIProgressView!
+    @IBOutlet weak var indicaterview1: UIActivityIndicatorView!
+    
+    @IBOutlet weak var stepper1: UIStepper!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,14 +72,33 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         
         switch sender.selectedSegmentIndex{
         case 0:
-            print("segment 1")
+            progressview1.progress = 0.3
+            indicaterview1.startAnimating()
+            
         case 1:
-            print("segment 2")
+            progressview1.progress = 0.6
+            indicaterview1.isHidden = !indicaterview1.isHidden
+            
         case 2:
-            print("segment 3")
+            progressview1.progress = 0.9
+            indicaterview1.stopAnimating()
+            
         default :
-            print("etc")
+            progressview1.progress = 0.0
+            
         }
+    }
+    
+    @IBAction func omSlider(_ sender: UISlider) {
+        print("슬라이더 변경됨", sender.value)
+        progressview1.progress = sender.value
+    }
+    
+    @IBAction func onStepper(_ sender: UIStepper) {
+        
+        print("스태퍼 변경됨", sender.value)
+        tv.text = String(Int(sender.value)  )
+        
     }
     
 }
