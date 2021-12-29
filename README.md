@@ -24,3 +24,26 @@ Asset -> 이미지를 관리.
 런치 스크린 -> 나중에
 
 Info.plist -> 환경 구성 파일.
+
+
+AppDelegate 파일 //프로젝트의 시작점 소스
+
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+        //앱이 맨처음 구동되었을때 실행되는 함수.
+        //여기에 필요하면 초기화 코드들을 넣어줄 수 있다.
+        
+        //중요한 부분
+        return true
+    }
+
+SceneDelegate  파일
+
+//새로 생긴 파일 xcode 11부터
+//swift Ui 라고 새로운 ui 항목이 발표되고 추가
+//swift ui를 지원하기 위한 class(브릿지 역할을 한다)
+//swift ui가 ios13부터 지원하기 때문에 아직은 시기상조 같다.
+
+
+나머지의 설명은 코드에 있음.
+
