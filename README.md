@@ -32,7 +32,6 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
         // Override point for customization after application launch.
         //앱이 맨처음 구동되었을때 실행되는 함수.
         //여기에 필요하면 초기화 코드들을 넣어줄 수 있다.
-        
         //중요한 부분
         return true
     }
